@@ -1,7 +1,4 @@
 ROSTemplateFormatVersion: '2015-09-01'
-Description:
-  en: Deploy LAMP environment
-  zh-cn: LAMP 环境部署
 Parameters:
   InstanceId:
     Type: String
