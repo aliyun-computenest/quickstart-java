@@ -1,6 +1,14 @@
 Service:
   DeployType: ros
   DeployMetadata:
+    SupplierDeployMetadata:
+      SupplierTemplateConfigs:
+        - Name: 选择ECS实例（Linux）
+          Url: ros_templates/template-select-ecs.yaml
+          PredefinedParameters: []
+        - Name: 新建ECS实例
+          Url: ros_templates/template-create-ecs.yaml
+          PredefinedParameters: []
     TemplateConfigs:
       - Name: 选择ECS实例（Linux）
         Url: ros_templates/template-select-ecs.yaml
