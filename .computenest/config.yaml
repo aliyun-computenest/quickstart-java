@@ -3,21 +3,21 @@ Service:
   DeployMetadata:
     SupplierDeployMetadata:
       SupplierTemplateConfigs:
-        - Name: 选择ECS实例（Linux）
-          Url: ros_templates/template-select-ecs.yaml
-          PredefinedParameters: []
-        - Name: 新建ECS实例
-          Url: ros_templates/template-create-ecs.yaml
-          PredefinedParameters: []
-    TemplateConfigs:
       - Name: 选择ECS实例（Linux）
         Url: ros_templates/template-select-ecs.yaml
         PredefinedParameters: []
-        DeployScene: ECS
       - Name: 新建ECS实例
         Url: ros_templates/template-create-ecs.yaml
         PredefinedParameters: []
-        DeployScene: ECS
+    TemplateConfigs:
+    - Name: 选择ECS实例（Linux）
+      Url: ros_templates/template-select-ecs.yaml
+      PredefinedParameters: []
+      DeployScene: ECS
+    - Name: 新建ECS实例
+      Url: ros_templates/template-create-ecs.yaml
+      PredefinedParameters: []
+      DeployScene: ECS
     NetworkMetadata:
       EnablePrivateVpcConnection: false
       EnableReversePrivateVpcConnection: false
@@ -33,12 +33,24 @@ Service:
         EnablePrometheus: false
   ServiceType: private
   ServiceInfo:
-    - Agreements: []
-      Image: resources/icons/service_logo.png
-      Locale: zh-CN
-      Name: Java 运行环境
-      ShortDescription: Java是一门面向对象的编程语言，不仅吸收了C++语言的各种优点，还摒弃了C++里难以理解的多继承、指针等概念，因此Java语言具有功能强大和简单易用两个特征。Java语言作为静态面向对象编程语言的代表，极好地实现了面向对象理论，允许程序员以优雅的思维方式进行复杂的编程。
-      Softwares: []
+  - Locale: zh-CN
+    Name: Java运行环境
+    ShortDescription: 
+      Java是一门面向对象的编程语言，不仅吸收了C++语言的各种优点，还摒弃了C++里难以理解的多继承、指针等概念，因此Java语言具有功能强大和简单易用两个特征。Java语言作为静态面向对象编程语言的代表，极好地实现了面向对象理论，允许程序员以优雅的思维方式进行复杂的编程。
+    Image: 
+      https://service-info-public.oss-cn-hangzhou.aliyuncs.com/5141674772595072/service-image/634c1703-e4cf-4914-a84e-2f7ff9f02d92.png
+    Softwares: []
+  - Locale: en-US
+    Name: Java Runtime Environment
+    ShortDescription: Java is an object-oriented programming language that not only
+      absorbs the advantages of C++, but also abandons the difficult-to-understand
+      concepts of multiple inheritance and pointers in C++. Therefore, Java is powerful
+      and easy to use. As a representative of static object-oriented programming languages,
+      Java implements object-oriented theory very well, allowing programmers to perform
+      complex programming with an elegant way of thinking.
+    Image: 
+      https://service-info-public.oss-cn-hangzhou.aliyuncs.com/5141674772595072/service-image/634c1703-e4cf-4914-a84e-2f7ff9f02d92.png
+    Softwares: []
   ShareType: Public
   ApprovalType: Manual
 Artifact: {}
